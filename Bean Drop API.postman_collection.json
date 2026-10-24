@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "49ebe1d9-e875-4924-9396-072e27ff2d8f",
+		"name": "Bean Drop API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45197817"
+	},
+	"item": [
+		{
+			"name": "Origins",
+			"item": [
+				{
+					"name": "Get All Origins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/origins/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"origins",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Origin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"country\": \"Колумбія\",\n    \"region\": \"Уїла\",\n    \"altitude\": \"1500-1800м\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/origins/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"origins",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Origin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/origins/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"origins",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Origin",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"country\": \"Колумбія\",\n    \"region\": \"Уїла (Оновлено)\",\n    \"altitude\": \"1600м\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/origins/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"origins",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Origin (Check 409 Conflict)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/origins/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"origins",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coffees",
+			"item": [
+				{
+					"name": "Get All Coffees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/coffees/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"coffees",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Coffee",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Colombia Huila Supremo\",\n    \"description\": \"Солодкі ноти карамелі та червоного яблука.\",\n    \"price\": \"450.00\",\n    \"weight_grams\": 250,\n    \"roast_level\": \"Medium\",\n    \"processing_method\": \"Washed\",\n    \"flavor_notes\": \"Карамель, Червоне яблуко\",\n    \"stock_quantity\": 15,\n    \"origin\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/coffees/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"coffees",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Coffee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/coffees/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"coffees",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Coffee",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Colombia Huila Supremo (Оновлено)\",\n    \"description\": \"Оновлений опис товару.\",\n    \"price\": \"480.00\",\n    \"weight_grams\": 250,\n    \"roast_level\": \"Medium\",\n    \"processing_method\": \"Washed\",\n    \"flavor_notes\": \"Карамель, Шоколад\",\n    \"stock_quantity\": 10,\n    \"origin\": 1\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/coffees/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"coffees",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Coffee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/coffees/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"coffees",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
