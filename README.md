@@ -5,6 +5,48 @@
 
 ---
 
+## Налаштування та локальний запуск
+
+### 1. Клонування репозиторію та створення віртуального середовища
+```bash
+git clone https://github.com/Pasha711/veb_rest.git
+cd veb_rest
+
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# Linux / macOS:
+source venv/bin/activate
+```
+### 2. Встановлення залежностей
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Тестування та покриття коду
+```bash
+pytest
+```
+- Запуск тестів із вимірюванням покриття (pytest-cov):
+```bash
+pytest --cov=catalog --cov-report=term-missing
+```
+
+### 4. Налаштування змінних середовища (.env)
+```bash
+cp .env.example .env
+```
+
+### 5. Міграції бази даних та запуск сервера
+```bash
+python manage.py migrate
+python manage.py runserver
+```
+
+### Документація API
+- Swagger UI: http://127.0.0.1:8000/api/docs/swagger/
+- Завантажити OpenAPI-схему (YAML/JSON): http://127.0.0.1:8000/api/schema/
+
 ## Ендпоінти REST API (JSON)
 
 ### 1. Кава (Coffees / Products)
